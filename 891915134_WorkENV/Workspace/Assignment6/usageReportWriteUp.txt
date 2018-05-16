@@ -1,0 +1,24 @@
+Kevin Nguyen
+891915134
+
+Assignment 6
+
+- Declare location of the perl module #!/usr/bin/perl  
+- Designate $ARGV[0] for the file name.
+- Open the text file using the open() and read file using '<'.
+	open(my $fileHandle, '<', $fileName) or die "could not open file '$fileName' $!\n";
+- Clean read of file into array using chomp(@array = <$fileHandle>)
+- In order to determine the sort area; we can assume rows from index zero to the index where "Filename".  
+	-Loop through the file and mark the row with "Filename" as the last index before the sort.
+- In order to filter out the keywords.  Must find size of the @ARGV array.
+	$index = scalar(@ARGV)
+- Begin filter process but indexing through each parameter and comparing the string to each index of the file.  File is stored in an array so use two for loops.  Once a match is found, delete that line using splice @array, $i, 1 and decrease the index by 1 because splice shifts array towards the index that was deleted.
+-
+- After filtering ends, shove the filtered array into a clean array using push()
+	push(@filteredArray, @array)
+- Begin sorting process; Create sub routine to sort numbers
+- Use sort function and call subroutine to parse the '%'; After sorting is complete; Push into new array called @sort
+- Push file array from index 0 to 6; Indexes 0 to 6 contains system and hardware information into the final array
+- Push the rest of the sorted portion into the main array which is 7 and beyond; Sorted array is also the filtered array
+- To create csv file; Use search and replace to replace whitespaces with commas
+- Create writing handle and use '>' to write to csv called 'usageOutput.csv' 

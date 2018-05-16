@@ -1,0 +1,23 @@
+Kevin Nguyen
+CWID: 891915134
+
+Assignment 3 Report
+
+Part 1:
+-Used search command ":/wrapper feature-tout-intl" to find the specified area.
+-Target area were lines 740-752
+-Search and replace syntax: :[starting line number], [ending line number][s]/[target string/regex]/[new string]/g.
+	1.  Used search and replace command ":740,752s/<!--//g" and ":740,752s/-->//g".
+	2.  Used search and replace command ":740,752s/ms-homepage-small.mp4/my_own_medium.mp4/g"
+	3.  Used search and replace command ":740,752s/feb30292ffc8/mar091317_1919/g"
+
+Part 2: 
+	-Used search and replace command: "1,$s/[0-9a-z\.-]*\.com/Web_site_place_holder".
+		- Search from line number 1 to the last line of the file with (1,$) 
+		- Use regex [0-9a-z\.-]* follow by the string pattern "\.com".
+		- [0-9a-z] means all alphabet between characters a through z, and digits from 0 through 9 followed by escaping the period "\." and "-".
+		- "*" means zero or more of the preceding character class.
+		- Lastly, provide the ending string pattern "\.com"
+	
+
+

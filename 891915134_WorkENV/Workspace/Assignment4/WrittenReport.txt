@@ -1,0 +1,17 @@
+Kevin Nguyen
+891915134
+
+[891915134@vclvmThu Apr 0517:12:04~]$
+
+Assignment 4 Written Report
+
+	Report1: To calculate each brand's total entry, loop through the entire 1st column to and record every instance of car brand.  "brandCounter[$1]++" This counts the number of copies each brand has in the file.  
+
+	Report2: In order to sort price, mileage, and year.  Shove each valid entry into arrays.  Price array, mileage array, and year array.  To caculate a "valid entry", entry must contain 5 fields AND field 1 must be letters AND fields 3, 4 and 5 must be digits.  Loop through the list and find all instances of each car brand then output the results into seperate file.  Results should be a seperate file for each car brand.  After that sort each file according to price, mileage and year.  We will use selection sort for that.  
+
+	Report3:  Loop through the entire file can shove each valid entry into their respective arrays.  Loop through the price array to find the index of each car that meets the conditions.  Condition 1: price is under $15,000.  Condition 2: price is between $20,000 and $65,000. Condition 3: price is over $100,000.  
+
+	Report4:  Again, loop through the entire file and shove each valid entry into their respective arrays.  Loop through the price array once again looking for the max and min price.  Max and min indexes are recorded and then printed.
+
+	Procedures:  For Report1, Report3 and Report4 uses one awk file while Report 2 uses a second awk file.  Execute the first awk file and redirect the output to a text file to produce Report1, Report3 and Report4.  At the same time, the first awk file creates a file for every brand.  Use the second awk file to sort each individual file for each brand and then redirect the output to the main report file.    
+
